@@ -2,11 +2,11 @@
     Implements ITeisendused
 
     Private Function ReverseString(ByVal input As String) As String
-        Dim reversedString As String = ""
+        Dim RevString As String = ""
         For i As Integer = input.Length - 1 To 0 Step -1
-            reversedString &= input(i)
+            RevString &= input(i)
         Next
-        Return reversedString
+        Return RevString
     End Function
     Private intAlgusSymbol As Integer
     Private intLoppSymbol As Integer

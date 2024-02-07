@@ -36,8 +36,7 @@ Partial Class formKasutajaAken
         Me.TimerUuenda = New System.Windows.Forms.Timer(Me.components)
         Me.lblLength = New System.Windows.Forms.Label()
         Me.lblVowels = New System.Windows.Forms.Label()
-        Me.btnTekst = New System.Windows.Forms.Button()
-        Me.btnAlgo = New System.Windows.Forms.Button()
+        Me.Algoritmiline = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -146,31 +145,22 @@ Partial Class formKasutajaAken
         Me.lblVowels.TabIndex = 11
         Me.lblVowels.Text = "..."
         '
-        'btnTekst
+        'Algoritmiline
         '
-        Me.btnTekst.Location = New System.Drawing.Point(57, 258)
-        Me.btnTekst.Name = "btnTekst"
-        Me.btnTekst.Size = New System.Drawing.Size(149, 23)
-        Me.btnTekst.TabIndex = 12
-        Me.btnTekst.Text = "CTekstiPooraja"
-        Me.btnTekst.UseVisualStyleBackColor = True
-        '
-        'btnAlgo
-        '
-        Me.btnAlgo.Location = New System.Drawing.Point(382, 258)
-        Me.btnAlgo.Name = "btnAlgo"
-        Me.btnAlgo.Size = New System.Drawing.Size(156, 23)
-        Me.btnAlgo.TabIndex = 13
-        Me.btnAlgo.Text = "CAlgoritmilinePooraja"
-        Me.btnAlgo.UseVisualStyleBackColor = True
+        Me.Algoritmiline.AutoSize = True
+        Me.Algoritmiline.Location = New System.Drawing.Point(248, 279)
+        Me.Algoritmiline.Name = "Algoritmiline"
+        Me.Algoritmiline.Size = New System.Drawing.Size(157, 20)
+        Me.Algoritmiline.TabIndex = 12
+        Me.Algoritmiline.Text = "Sorteeri algoritmiliselt"
+        Me.Algoritmiline.UseVisualStyleBackColor = True
         '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnAlgo)
-        Me.Controls.Add(Me.btnTekst)
+        Me.Controls.Add(Me.Algoritmiline)
         Me.Controls.Add(Me.lblVowels)
         Me.Controls.Add(Me.lblLength)
         Me.Controls.Add(Me.btnStopp)
@@ -203,6 +193,5 @@ Partial Class formKasutajaAken
     Friend WithEvents TimerUuenda As Timer
     Friend WithEvents lblLength As Label
     Friend WithEvents lblVowels As Label
-    Friend WithEvents btnTekst As Button
-    Friend WithEvents btnAlgo As Button
+    Friend WithEvents Algoritmiline As CheckBox
 End Class

@@ -1,6 +1,9 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports PrjTekstiPooraja
 
 Public Class formKasutajaAken
+
+    Dim pooraja1 As PrjTekstiPooraja.ITeisendused
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -57,7 +60,11 @@ Public Class formKasutajaAken
 
     End Sub
 
-    Private Sub btnTekst_Click(sender As Object, e As EventArgs) Handles btnTekst.Click
-
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Algoritmiline.CheckedChanged
+        If Algoritmiline.CheckState Then
+            pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
+        Else
+            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+        End If
     End Sub
 End Class
