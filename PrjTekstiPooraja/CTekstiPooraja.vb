@@ -32,10 +32,10 @@
     End Property
 
     Private Sub teisendaTekst(ByRef strSisendTekst As String) Implements ITeisendused.teisendaTekst
-        Throw New NotImplementedException()
+        strPooratavTekst = StrReverse(strSisendTekst)
     End Sub
 
-    Private Function pooraTeks() As String Implements ITeisendused.pooraTeks
-        Throw New NotImplementedException()
+    Private Function pooraTekst() As String Implements ITeisendused.pooraTekst
+        Return StrReverse(strPooratavTekst)
     End Function
 End Class
