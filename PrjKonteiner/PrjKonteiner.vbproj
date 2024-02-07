@@ -120,5 +120,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrjTekstiPooraja\PrjTekstiPooraja.vbproj">
+      <Project>{002dfb7c-6e84-4dc4-b09f-753472febbe3}</Project>
+      <Name>PrjTekstiPooraja</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
