@@ -24,7 +24,7 @@ Public Class formKasutajaAken
 
     Private Sub btnPoora1_Click(sender As Object, e As EventArgs) Handles btnPoora1.Click
         Dim pooraja As PrjTekstiPooraja.ITeisendused
-        pooraja = New PrjTekstiPooraja.CTekstiPooraja
+        pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja 'CTekstiPooraja
         pooraja.strTekst = txtSisendTekst.Text
         txtValjundTekst1.Text = pooraja.pooraTekst()
     End Sub
@@ -54,6 +54,10 @@ Public Class formKasutajaAken
     End Sub
 
     Private Sub lblLength_Click(sender As Object, e As EventArgs) Handles lblLength.Click
+
+    End Sub
+
+    Private Sub btnTekst_Click(sender As Object, e As EventArgs) Handles btnTekst.Click
 
     End Sub
 End Class

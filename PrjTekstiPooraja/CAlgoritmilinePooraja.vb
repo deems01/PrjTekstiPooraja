@@ -3,48 +3,46 @@
 
     Private Function ReverseString(ByVal input As String) As String
         Dim reversedString As String = ""
-
-        ' Loop through the characters of the input string in reverse order
         For i As Integer = input.Length - 1 To 0 Step -1
-            ' Append each character to the reversedString
             reversedString &= input(i)
         Next
-
-        ' Return the reversed string
         Return reversedString
     End Function
+    Private intAlgusSymbol As Integer
+    Private intLoppSymbol As Integer
+    Private strPooratavTekst As String
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
-            Throw New NotImplementedException()
+            Return intAlgusSymbol
         End Get
         Set(value As Integer)
-            Throw New NotImplementedException()
+            intAlgusSymbol = value
         End Set
     End Property
 
     Private Property intLopp As Integer Implements ITeisendused.intLopp
         Get
-            Throw New NotImplementedException()
+            Return intLoppSymbol
         End Get
         Set(value As Integer)
-            Throw New NotImplementedException()
+            intLoppSymbol = value
         End Set
     End Property
 
     Private Property strTekst As String Implements ITeisendused.strTekst
         Get
-            Throw New NotImplementedException()
+            Return strPooratavTekst
         End Get
         Set(value As String)
-            Throw New NotImplementedException()
+            strPooratavTekst = value
         End Set
     End Property
 
     Private Sub teisendaTekst(ByRef strSisendTekst As String) Implements ITeisendused.teisendaTekst
-        Throw New NotImplementedException()
+        strPooratavTekst = StrReverse(strSisendTekst)
     End Sub
 
     Private Function pooraTekst() As String Implements ITeisendused.pooraTekst
-        Throw New NotImplementedException()
+        Return StrReverse(strPooratavTekst)
     End Function
 End Class
