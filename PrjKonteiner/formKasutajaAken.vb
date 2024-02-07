@@ -14,11 +14,9 @@ Public Class formKasutajaAken
 
     Private Function CountVowels(text As String) As Integer
         Dim cnt As Integer = 0
-        ' Loop through each character in the text
-        For Each c As Char In text
-            ' Check if the character is a vowel
-            If "AEIOUaeiou".Contains(c) Then
-                cnt += 1 ' Increment the count if it's a vowel
+        For Each taht As Char In text
+            If "AEIOUaeiou".Contains(taht) Then
+                cnt += 1
             End If
         Next
         Return cnt
