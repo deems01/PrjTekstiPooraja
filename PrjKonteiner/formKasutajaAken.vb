@@ -23,7 +23,8 @@
     End Sub
 
     Private Sub btnStopp_Click(sender As Object, e As EventArgs) Handles btnStopp.Click
-
+        TimerUuenda.Enabled = False
+        btnStart.Enabled = True
     End Sub
 
     Private Sub TimerUuenda_Tick(sender As Object, e As EventArgs) Handles TimerUuenda.Tick
