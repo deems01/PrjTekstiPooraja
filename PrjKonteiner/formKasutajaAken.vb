@@ -26,17 +26,17 @@ Public Class formKasutajaAken
     End Function
 
     Private Sub btnPoora1_Click(sender As Object, e As EventArgs) Handles btnPoora1.Click
-        Dim pooraja As PrjTekstiPooraja.ITeisendused
-        pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja 'CTekstiPooraja
-        pooraja.strTekst = txtSisendTekst.Text
-        txtValjundTekst1.Text = pooraja.pooraTekst()
+        Dim pooraja1 As PrjTekstiPooraja.ITeisendused
+        pooraja1 = New PrjTekstiPooraja.CAlgoritmilinePooraja 'CTekstiPooraja
+        pooraja1.strTekst = txtSisendTekst.Text
+        txtValjundTekst1.Text = pooraja1.pooraTekst()
     End Sub
 
     Private Sub btn2Poora_Click(sender As Object, e As EventArgs) Handles btn2Poora.Click
-        Dim pooraja As PrjTekstiPooraja.ITeisendused
-        pooraja = New PrjTekstiPooraja.CTekstiPooraja
-        pooraja.teisendaTekst(txtSisendTekst.Text)
-        txtValjundTekst2.Text = pooraja.strTekst
+        Dim pooraja1 As PrjTekstiPooraja.ITeisendused
+        pooraja1 = New PrjTekstiPooraja.CTekstiPooraja
+        pooraja1.teisendaTekst(txtSisendTekst.Text)
+        txtValjundTekst2.Text = pooraja1.strTekst
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnStart.Click
@@ -62,9 +62,9 @@ Public Class formKasutajaAken
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Algoritmiline.CheckedChanged
         If Algoritmiline.CheckState Then
-            pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
+            pooraja1 = New PrjTekstiPooraja.CAlgoritmilinePooraja
         Else
-            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+            pooraja1 = New PrjTekstiPooraja.CTekstiPooraja
         End If
     End Sub
 End Class
