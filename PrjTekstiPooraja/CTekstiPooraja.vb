@@ -6,28 +6,28 @@
     Private strPooratavTekst As String
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
-            Throw New NotImplementedException()
+            Return intAlgusSymbol
         End Get
         Set(value As Integer)
-            Throw New NotImplementedException()
+            intAlgusSymbol = value
         End Set
     End Property
 
     Private Property intLopp As Integer Implements ITeisendused.intLopp
         Get
-            Throw New NotImplementedException()
+            Return intLoppSymbol
         End Get
         Set(value As Integer)
-            Throw New NotImplementedException()
+            intLoppSymbol = value
         End Set
     End Property
 
     Private Property strTekst As String Implements ITeisendused.strTekst
         Get
-            Throw New NotImplementedException()
+            Return strPooratavTekst
         End Get
         Set(value As String)
-            Throw New NotImplementedException()
+            strPooratavTekst = value
         End Set
     End Property
 
