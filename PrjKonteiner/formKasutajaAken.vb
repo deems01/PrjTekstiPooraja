@@ -1,9 +1,10 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.CodeDom.Compiler
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports PrjTekstiPooraja
 
 Public Class formKasutajaAken
 
-    Dim pooraja1 As PrjTekstiPooraja.ITeisendused
+    Dim temp As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -26,17 +27,25 @@ Public Class formKasutajaAken
     End Function
 
     Private Sub btnPoora1_Click(sender As Object, e As EventArgs) Handles btnPoora1.Click
-        Dim pooraja1 As PrjTekstiPooraja.ITeisendused
-        pooraja1 = New PrjTekstiPooraja.CAlgoritmilinePooraja
-        pooraja1.strTekst = txtSisendTekst.Text
-        txtValjundTekst1.Text = pooraja1.pooraTekst()
+        Dim pooraja As PrjTekstiPooraja.ITeisendused
+        If temp = 0 Then
+            pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
+        Else
+            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+        End If
+        pooraja.strTekst = txtSisendTekst.Text
+        txtValjundTekst1.Text = pooraja.pooraTekst()
     End Sub
 
     Private Sub btn2Poora_Click(sender As Object, e As EventArgs) Handles btn2Poora.Click
-        Dim pooraja1 As PrjTekstiPooraja.ITeisendused
-        pooraja1 = New PrjTekstiPooraja.CTekstiPooraja
-        pooraja1.teisendaTekst(txtSisendTekst.Text)
-        txtValjundTekst2.Text = pooraja1.strTekst
+        Dim pooraja As PrjTekstiPooraja.ITeisendused
+        If temp = 0 Then
+            pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
+        Else
+            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+        End If
+        pooraja.teisendaTekst(txtSisendTekst.Text)
+        txtValjundTekst2.Text = pooraja.strTekst
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnStart.Click
@@ -54,6 +63,7 @@ Public Class formKasutajaAken
         pooraja = New PrjTekstiPooraja.CTekstiPooraja
         pooraja.strTekst = txtSisendTekst.Text
         txtValjundTekst1.Text = pooraja.pooraTekst
+        txtValjundTekst2.Text = pooraja.pooraTekst
     End Sub
 
     Private Sub lblLength_Click(sender As Object, e As EventArgs) Handles lblLength.Click
@@ -62,9 +72,9 @@ Public Class formKasutajaAken
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Algoritmiline.CheckedChanged
         If Algoritmiline.CheckState Then
-            pooraja1 = New PrjTekstiPooraja.CAlgoritmilinePooraja
+            temp = 0
         Else
-            pooraja1 = New PrjTekstiPooraja.CTekstiPooraja
+            temp = 1
         End If
     End Sub
 End Class
