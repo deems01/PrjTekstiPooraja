@@ -1,13 +1,7 @@
 ﻿Public Class CAlgoritmilinePooraja
     Implements ITeisendused
 
-    Private Function ReverseString(ByVal input As String) As String
-        Dim RevString As String = ""
-        For i As Integer = input.Length - 1 To 0 Step -1
-            RevString &= input(i)
-        Next
-        Return RevString
-    End Function
+
     Private intAlgusSymbol As Integer
     Private intLoppSymbol As Integer
     Private strPooratavTekst As String
@@ -43,6 +37,10 @@
     End Sub
 
     Private Function pooraTekst() As String Implements ITeisendused.pooraTekst
-        Return StrReverse(strPooratavTekst)
+        Dim RevString As String = ""
+        For i As Integer = strPooratavTekst.Length - 1 To 0 Step -1
+            RevString &= strPooratavTekst(i)
+        Next
+        Return RevString
     End Function
 End Class
