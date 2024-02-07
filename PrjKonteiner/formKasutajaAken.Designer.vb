@@ -93,6 +93,7 @@ Partial Class formKasutajaAken
         '
         'txtValjundTekst1
         '
+        Me.txtValjundTekst1.Enabled = False
         Me.txtValjundTekst1.Location = New System.Drawing.Point(177, 113)
         Me.txtValjundTekst1.Name = "txtValjundTekst1"
         Me.txtValjundTekst1.Size = New System.Drawing.Size(169, 22)
@@ -100,6 +101,7 @@ Partial Class formKasutajaAken
         '
         'txtValjundTekst2
         '
+        Me.txtValjundTekst2.Enabled = False
         Me.txtValjundTekst2.Location = New System.Drawing.Point(177, 197)
         Me.txtValjundTekst2.Name = "txtValjundTekst2"
         Me.txtValjundTekst2.Size = New System.Drawing.Size(169, 22)
@@ -187,12 +189,12 @@ Partial Class formKasutajaAken
     Friend WithEvents btnPoora1 As Button
     Friend WithEvents btn2Poora As Button
     Friend WithEvents txtSisendTekst As TextBox
-    Friend WithEvents txtValjundTekst1 As TextBox
-    Friend WithEvents txtValjundTekst2 As TextBox
     Friend WithEvents btnStart As Button
     Friend WithEvents btnStopp As Button
     Friend WithEvents TimerUuenda As Timer
     Friend WithEvents lblLength As Label
     Friend WithEvents lblVowels As Label
     Friend WithEvents Algoritmiline As CheckBox
+    Private WithEvents txtValjundTekst1 As TextBox
+    Private WithEvents txtValjundTekst2 As TextBox
 End Class
