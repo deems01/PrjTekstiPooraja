@@ -4,7 +4,7 @@ Imports PrjTekstiPooraja
 
 Public Class formKasutajaAken
 
-    Dim temp As Integer
+    Dim temp As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -28,24 +28,32 @@ Public Class formKasutajaAken
 
     Private Sub btnPoora1_Click(sender As Object, e As EventArgs) Handles btnPoora1.Click
         Dim pooraja As PrjTekstiPooraja.ITeisendused
-        If temp = 0 Then
+        If temp = 1 Then
             pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
-        Else
-            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+            pooraja.strTekst = txtSisendTekst.Text
+            txtValjundTekst1.Text = pooraja.pooraTekst()
         End If
-        pooraja.strTekst = txtSisendTekst.Text
-        txtValjundTekst1.Text = pooraja.pooraTekst()
+        If temp = 2 Then
+            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+            pooraja.strTekst = txtSisendTekst.Text
+            txtValjundTekst1.Text = pooraja.pooraTekst()
+        End If
+
     End Sub
 
     Private Sub btn2Poora_Click(sender As Object, e As EventArgs) Handles btn2Poora.Click
         Dim pooraja As PrjTekstiPooraja.ITeisendused
-        If temp = 0 Then
+        If temp = 1 Then
             pooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
-        Else
-            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+            pooraja.teisendaTekst(txtSisendTekst.Text)
+            txtValjundTekst2.Text = pooraja.strTekst
         End If
-        pooraja.teisendaTekst(txtSisendTekst.Text)
-        txtValjundTekst2.Text = pooraja.strTekst
+        If temp = 2 Then
+            pooraja = New PrjTekstiPooraja.CTekstiPooraja
+            pooraja.teisendaTekst(txtSisendTekst.Text)
+            txtValjundTekst2.Text = pooraja.strTekst
+        End If
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnStart.Click
@@ -72,9 +80,9 @@ Public Class formKasutajaAken
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Algoritmiline.CheckedChanged
         If Algoritmiline.CheckState Then
-            temp = 0
-        Else
             temp = 1
+        Else
+            temp = 2
         End If
     End Sub
 End Class
