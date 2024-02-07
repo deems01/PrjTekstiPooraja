@@ -6,7 +6,23 @@ Public Class formKasutajaAken
     End Sub
     Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
         lblLength.Text = txtSisendTekst.Text.Length.ToString()
+
+        Dim vowelCount As Integer = CountVowels(txtSisendTekst.Text)
+
+        lblVowels.Text = "Taishaalikud: " & vowelCount.ToString()
     End Sub
+
+    Private Function CountVowels(text As String) As Integer
+        Dim cnt As Integer = 0
+        ' Loop through each character in the text
+        For Each c As Char In text
+            ' Check if the character is a vowel
+            If "AEIOUaeiou".Contains(c) Then
+                cnt += 1 ' Increment the count if it's a vowel
+            End If
+        Next
+        Return cnt
+    End Function
 
     Private Sub btnPoora1_Click(sender As Object, e As EventArgs) Handles btnPoora1.Click
         Dim pooraja As PrjTekstiPooraja.ITeisendused
