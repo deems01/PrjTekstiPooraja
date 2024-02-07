@@ -16,4 +16,20 @@
         pooraja.teisendaTekst(txtSisendTekst.Text)
         txtValjundTekst2.Text = pooraja.strTekst
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        TimerUuenda.Enabled = True
+        btnStart.Enabled = False
+    End Sub
+
+    Private Sub btnStopp_Click(sender As Object, e As EventArgs) Handles btnStopp.Click
+
+    End Sub
+
+    Private Sub TimerUuenda_Tick(sender As Object, e As EventArgs) Handles TimerUuenda.Tick
+        Dim pooraja As PrjTekstiPooraja.ITeisendused
+        pooraja = New PrjTekstiPooraja.CTekstiPooraja
+        pooraja.strTekst = txtSisendTekst.Text
+        txtValjundTekst1.Text = pooraja.pooraTekst
+    End Sub
 End Class
