@@ -1,6 +1,18 @@
 ﻿Public Class CAlgoritmilinePooraja
     Implements ITeisendused
 
+    Private Function ReverseString(ByVal input As String) As String
+        Dim reversedString As String = ""
+
+        ' Loop through the characters of the input string in reverse order
+        For i As Integer = input.Length - 1 To 0 Step -1
+            ' Append each character to the reversedString
+            reversedString &= input(i)
+        Next
+
+        ' Return the reversed string
+        Return reversedString
+    End Function
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
             Throw New NotImplementedException()

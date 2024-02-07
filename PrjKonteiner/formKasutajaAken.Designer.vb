@@ -131,18 +131,18 @@ Partial Class formKasutajaAken
         Me.lblLength.AutoSize = True
         Me.lblLength.Location = New System.Drawing.Point(360, 35)
         Me.lblLength.Name = "lblLength"
-        Me.lblLength.Size = New System.Drawing.Size(48, 16)
+        Me.lblLength.Size = New System.Drawing.Size(16, 16)
         Me.lblLength.TabIndex = 10
-        Me.lblLength.Text = "Label4"
+        Me.lblLength.Text = "..."
         '
         'lblVowels
         '
         Me.lblVowels.AutoSize = True
         Me.lblVowels.Location = New System.Drawing.Point(415, 35)
         Me.lblVowels.Name = "lblVowels"
-        Me.lblVowels.Size = New System.Drawing.Size(65, 16)
+        Me.lblVowels.Size = New System.Drawing.Size(16, 16)
         Me.lblVowels.TabIndex = 11
-        Me.lblVowels.Text = "lblVowels"
+        Me.lblVowels.Text = "..."
         '
         'formKasutajaAken
         '
