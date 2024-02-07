@@ -1,6 +1,11 @@
-﻿Public Class formKasutajaAken
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class formKasutajaAken
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+    Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
+        lblLength.Text = txtSisendTekst.Text.Length.ToString()
     End Sub
 
     Private Sub btnPoora1_Click(sender As Object, e As EventArgs) Handles btnPoora1.Click
@@ -32,5 +37,9 @@
         pooraja = New PrjTekstiPooraja.CTekstiPooraja
         pooraja.strTekst = txtSisendTekst.Text
         txtValjundTekst1.Text = pooraja.pooraTekst
+    End Sub
+
+    Private Sub lblLength_Click(sender As Object, e As EventArgs) Handles lblLength.Click
+
     End Sub
 End Class

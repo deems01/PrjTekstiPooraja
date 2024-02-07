@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formKasutajaAken
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class formKasutajaAken
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -34,6 +34,7 @@ Partial Class formKasutajaAken
         Me.btnStart = New System.Windows.Forms.Button()
         Me.btnStopp = New System.Windows.Forms.Button()
         Me.TimerUuenda = New System.Windows.Forms.Timer(Me.components)
+        Me.lblLength = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -124,11 +125,21 @@ Partial Class formKasutajaAken
         '
         Me.TimerUuenda.Interval = 5000
         '
+        'lblLength
+        '
+        Me.lblLength.AutoSize = True
+        Me.lblLength.Location = New System.Drawing.Point(360, 35)
+        Me.lblLength.Name = "lblLength"
+        Me.lblLength.Size = New System.Drawing.Size(48, 16)
+        Me.lblLength.TabIndex = 10
+        Me.lblLength.Text = "Label4"
+        '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblLength)
         Me.Controls.Add(Me.btnStopp)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.txtValjundTekst2)
@@ -157,4 +168,5 @@ Partial Class formKasutajaAken
     Friend WithEvents btnStart As Button
     Friend WithEvents btnStopp As Button
     Friend WithEvents TimerUuenda As Timer
+    Friend WithEvents lblLength As Label
 End Class
