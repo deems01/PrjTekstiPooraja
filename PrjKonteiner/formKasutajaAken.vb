@@ -33,7 +33,7 @@ Public Class formKasutajaAken
             pooraja.strTekst = txtSisendTekst.Text
             txtValjundTekst1.Text = pooraja.pooraTekst()
         End If
-        If temp = 2 Then
+        If temp = 0 Then
             pooraja = New PrjTekstiPooraja.CTekstiPooraja
             pooraja.strTekst = txtSisendTekst.Text
             txtValjundTekst1.Text = pooraja.pooraTekst()
@@ -48,7 +48,7 @@ Public Class formKasutajaAken
             pooraja.teisendaTekst(txtSisendTekst.Text)
             txtValjundTekst2.Text = pooraja.strTekst
         End If
-        If temp = 2 Then
+        If temp = 0 Then
             pooraja = New PrjTekstiPooraja.CTekstiPooraja
             pooraja.teisendaTekst(txtSisendTekst.Text)
             txtValjundTekst2.Text = pooraja.strTekst
@@ -59,11 +59,13 @@ Public Class formKasutajaAken
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnStart.Click
         TimerUuenda.Enabled = True
         btnStart.Enabled = False
+        btnStopp.Enabled = True
     End Sub
 
     Private Sub btnStopp_Click(sender As Object, e As EventArgs) Handles btnStopp.Click
         TimerUuenda.Enabled = False
         btnStart.Enabled = True
+        btnStopp.Enabled = False
     End Sub
 
     Private Sub TimerUuenda_Tick(sender As Object, e As EventArgs) Handles TimerUuenda.Tick
@@ -82,7 +84,7 @@ Public Class formKasutajaAken
         If Algoritmiline.CheckState Then
             temp = 1
         Else
-            temp = 2
+            temp = 0
         End If
     End Sub
 End Class
